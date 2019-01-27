@@ -35,6 +35,25 @@ gdp_byContinent <- gapminder %>%
 
 lifexp_byCountry <- gapminder %>%
   group_by(country) %>%
-  summarise(meanlifeExp = mean(lifeExp))
+  summarise(meanlifeExp = mean(lifeExp), sdLifeExp=sd(lifeExp))
 
 head(lifexp_byCountry)
+
+arrange(lifexp_byCountry, desc(sdLifeExp))
+
+# count
+gapminder %>%
+  filter(year==2002) %>%
+  count(continent, sort=TRUE)
+
+#mutate
+gdp_byContinent_log <- gapminder %>%
+  mutate(gdp_log = log(gdpPercap)) %>%
+  group_by(continent,year) %>%
+  summarize(meanLogGDP = mean(gdp_log))
+
+gdp_byContinent_log
+
+
+ggplot(data = gdp_byContinent_log, aes( x = year, y = meanLogGDP, by = continent, color = continent)) +
+  geom_point()
