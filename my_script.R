@@ -1,4 +1,5 @@
 #enter a comment
+#
 #comments are useful for myc ode to be more easily read by me and my friends
 
 #initiate or create new variable called cats
@@ -9,6 +10,7 @@ cats <- data.frame(coat = c("calico", "black", "tabby"),
 #write cats to new file called feline-data.csv
 write.csv(x = cats, file = "data/feline-data.csv", row.names = FALSE)
 #test
+#
 #
 #look at specific columns
 cats$weight
