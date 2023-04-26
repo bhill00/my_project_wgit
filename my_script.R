@@ -1,5 +1,5 @@
 #enter a comment
-#
+##
 #comments are useful for myc ode to be more easily read by me and my friends
 
 #initiate or create new variable called cats
