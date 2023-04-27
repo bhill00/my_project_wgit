@@ -13,6 +13,7 @@ write.csv(x = cats, file = "data/feline-data.csv", row.names = FALSE)
 #
 #
 #
+#
 #look at specific columns
 cats$weight
 cats$coat
